@@ -2,6 +2,12 @@
 
 C2 Tracker is a free-to-use-community-driven IOC feed that uses [Shodan](https://www.shodan.io/) ~~and [Censys](https://search.censys.io/)~~ searches to collect IP addresses of known malware/botnet/C2 infrastructure.
 
+## This Project has been Archived
+
+This project has been archived. The text files in `data/` have been removed and are no longer updated. The signatures in `tracker.py` are no longer updated.
+
+This project can still be ran locally, see [below](https://github.com/montysecurity/C2-Tracker?tab=readme-ov-file#running-locally).
+
 ## Honorable Mentions
 
 Many of the queries have been sourced from other CTI researchers:
@@ -146,6 +152,8 @@ The most recent collection will be stored in `data/`. The IPs are seperated by t
 ## Running Locally
 
 If you want to host a private version, put your Shodan API key in an environment variable called `SHODAN_API_KEY`, and setup your Censys credentials in `CENSYS_API_ID` & `CENSYS_API_SECRET`
+
+The `censys()` function is currently commented out / disabled. See `tracker.py` for details
 
 ```bash
 python3 -m pip install -r requirements.txt
